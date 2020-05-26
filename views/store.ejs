@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beautiful Nubia | Store</title>
+    <link rel='stylesheet' type="text/css" href='styles.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
+    </head>
+
+<body>
+    <header class='main-header'>
+        <nav class='main-nav nav'>
+            <ul>
+                <li><a href='index.html'>HOME</a></li>
+                <li><a href='/store'>STORE</a></li>
+                <li><a href='AboutNubia.html'>ABOUT</a></li>
+            </ul>
+        </nav>
+
+        <h1 class='band-name  band-name-large'>Beautiful Nubia</h1>
+    </header>
+    <section class='container content-section' >  
+        <h2 class='section-header'>FEATURED ALBUM</h2>
+        <div class='row jumbotron jumbotron-fluid'>
+            <% items.featuredAlbum.forEach(function(item){ %>
+            <div class='col-md-3 col-sm-6' data-item-id = <%= item.id %> > 
+                <div class="card"> 
+                    <span class='album-title '><%= item.name %> </span>
+                    <div><img class='card-img-top' src="images/<%= item.imgName %> " height=150px width=150px></div>
+                    <div class='card-body'><span class='album-price'>$<%= item.price / 100 %> </span>
+                        <button class='btn btn-primary' role='button'>ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        <% }) %> 
+        </div>
+    </section>
+
+    <section class='container content-section' >  
+        <h2 class='section-header'>ACOUSTIC AND POETRY</h2>
+        <div class='row jumbotron jumbotron-fluid'>
+            <% items.acousticPoetry.forEach(function(item){ %>
+            <div class='col-md-3 col-sm-6' data-item-id = <%= item.id %> > 
+                <div class="card"> 
+                    <span class='album-title '><%= item.name %> </span>
+                    <div><img class='card-img-top' src="images/<%= item.imgName %> " height=150px width=150px></div>
+                    <div class='card-body'><span class='album-price'>$<%= item.price / 100 %> </span>
+                        <button class='btn btn-primary' role='button'>ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        <% }) %> 
+        </div>
+    </section>
+
+
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-quantity-input cart-header cart-column">QUANTITY</span>
+        </div>
+
+        <div class="cart-items">
+        
+        </div>
+
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">N0.00</span>
+        </div>
+        <button class="btn btn-info purchase" type="button">PURCHASE</button>
+    </section>
+    
+
+    
+    <footer class='main-footer'>
+        <div class='container main-footer-container'>
+            <h3 class='band-name h'><a href="https://beautifulnubia.com">Beautiful Nubia</a></h3>
+            <ul class='nav footer-nav'>
+                <li><a href='https://youtube.com/watch?v=0pcM6teVdKk&list=PL6n9fhu94yhW7yoUOGNOfHurUE6bpOO2b'
+                        target="_blank"><img src="images/png/001-youtube.png" height=30px width=50px></a></li>
+                <li><a href='https://twitter.com/Beautiful_Nubia?s=09' target='_blank'><img
+                            src="images/png/008-twitter.png" height=30px width=50px></a></li>
+                <li><a href='https://facebook.com/beautifulnubia' target='_blank'><img src="images/png/036-facebook.png"
+                            height=30px width=50px></a></li>
+            </ul>
+            <h6 class="display-5">&copy 2020 &nbsp;<a href='https://twitter.com/richkinwe' target='_blank'><img
+                        src="images/png/008-twitter.png" height=30px width=50px>...designed by @richkinwe</a></li>
+            </h6>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src='nubia.js' defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+    "featuredAlbum": [
+        {
+            "id": 1,
+            "name": "APEJO",
+            "price": 2499,
+            "imgName": "apejo.jfif"
+        },
+        {
+            "id": 2,
+            "name": "ATUNLUTO",
+            "price": 1999,
+            "imgName": "atunluto.jfif"
+        },
+        {
+            "id": 3,
+            "name": "SOUNDBENDER",
+            "price": 999,
+            "imgName": "bender.jfif"
+        },
+        {
+            "id": 4,
+            "name": "IWA",
+            "price": 1499,
+            "imgName": "iwa.jfif"
+        },
+        {
+            "id": 5,
+            "name": "KEERE",
+            "price": 1099,
+            "imgName": "keere.jfif"
+        },
+        {
+            "id": 6,
+            "name": "Jangbalajugbu",
+            "price": 1999,
+            "imgName": "jangba.jfif"
+        },
+        {
+            "id": 7,
+            "name": "TAABAKU",
+            "price": 1699,
+            "imgName": "taabaku.jfif"
+        },
+        {
+            "id": 8,
+            "name": "ORIOJORI",
+            "price": 1499,
+            "imgName": "ori.jfif"
+        }
+    ],
+    "acousticPoetry": [
+        {
+            "id": 9,
+            "name": "TALES FROM A SMALL ROOM",
+            "price": 999,
+            "imgName": "tale.jfif"
+        },
+        {
+            "id": 10,
+            "name": "MORE TALES FROM A SMALL ROON",
+            "price": 1499,
+            "imgName": "tales.jfif"
+        },
+        {
+            "id": 11,
+            "name": "EVEN MORE TALES FROM A SMALL ROOM",
+            "price": 1499,
+            "imgName": "taless.jfif"
+        },
+        {
+            "id": 12,
+            "name": "VOICES FROM HEAVEN",
+            "price": 1099,
+            "imgName": "voice.jfif"
+        }
+    ]
+}
